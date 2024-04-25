@@ -1,0 +1,61 @@
+:root {
+  --primaryColor: #c6e5df;
+  --secondaryColor: #c6b2c1;
+  --accentColor: #779423;
+  --textColor: #223843;
+  --mainTransition: all 200ms ease-in-out;
+  --headingFontFamily: "Playfair Display", serif;
+  --paragraphFontFamily: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--textColor);
+  font-family: var(--paragraphFontFamily);
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headingFontFamily);
+
+  letter-spacing: 2px;
+  margin-bottom: 1.25rem;
+}
+
+p {
+  font-family: var(--paragraphFontFamily);
+}
+
+.btn {
+  background: var(--accentColor);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 15px 15px 15px 0;
+  /* color: white; */
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  max-width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: var(--mainTransition);
+}
