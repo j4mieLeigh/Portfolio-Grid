@@ -2,6 +2,7 @@
   --primaryColor: #c6e5df;
   --secondaryColor: #c6b2c1;
   --accentColor: #ad343e;
+  --backgroundColor: #eef2fa;
   --textColor: #27474e;
   --mainTransition: all 200ms ease-in-out;
   --headingFontFamily: "Playfair Display", serif;
@@ -38,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 h3 {
@@ -61,6 +62,10 @@ h3 {
   text-transform: uppercase;
   transition: var(--mainTransition);
 }
+
+/* ===============
+HOME PAGE
+=============== */
 
 .nav-header {
   font-family: "Source Code Pro", monospace;
@@ -100,7 +105,7 @@ h3 {
 
 .sidebar {
   align-items: center;
-  background-color: #ffecfa;
+  background-color: var(--backgroundColor);
   color: white;
   display: grid;
   justify-content: center;
@@ -120,7 +125,6 @@ h3 {
 
 .sidebar-links {
   list-style: none;
-  /* text-align: center; */
 }
 
 .sidebar-links a {
@@ -201,7 +205,41 @@ h3 {
 }
 
 /* ===============
-MEDIA QUERY - for big screens
+ABOUT PAGE
+=============== */
+
+.about-page-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 15px 20px;
+}
+
+.bio-container {
+  background-color: var(--secondaryColor);
+  border-radius: 0px 40px 40px 40px;
+  padding: 30px;
+}
+
+.skills-container {
+  background-color: var(--backgroundColor);
+  border-radius: 40px 40px 0px 40px;
+  padding: 30px;
+}
+
+.contact-container {
+  background-color: var(--primaryColor);
+  border-radius: 40px 0px 40px 40px;
+  padding: 30px;
+}
+
+.working-together-icons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ===============
+MEDIA QUERY: for big screens
 =============== */
 
 @media screen and (min-width: 768px) {
@@ -216,7 +254,7 @@ MEDIA QUERY - for big screens
   .nav-links {
     display: grid;
     column-gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     justify-self: end;
     list-style: none;
