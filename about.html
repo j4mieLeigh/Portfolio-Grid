@@ -6,6 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <script
+      src="https://kit.fontawesome.com/c90a6c0176.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Web Development Portfolio | About | Jamie Leigh ✨</title>
     <link
       rel="stylesheet"
@@ -13,7 +17,73 @@
     />
   </head>
   <body>
-    <!-- nav bar -->
+    <nav
+      class="nav"
+      id="nav"
+    >
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html">j.Leigh{}</a>
+          <button
+            class="nav-btn"
+            id="nav-btn"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="#contact-container">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <aside
+      class="sidebar"
+      id="sidebar"
+    >
+      <div>
+        <button
+          class="close-btn"
+          id="close-btn"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="sidebar-links">
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="/about.html">contact</a></li>
+        </ul>
+        <ul class="social-icons">
+          <li>
+            <a
+              href="https://github.com/j4mieLeigh"
+              class="social-icon"
+              target="blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jl-writer-dev/"
+              class="social-icon"
+              target="blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="mailto:jamie.leigh.inbox@gmail.com"
+              class="social-icon"
+              target="blank"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
     <div class="about-page-container">
       <div class="bio-container">
         <h1>About Me</h1>
@@ -29,15 +99,21 @@
         </p>
       </div>
       <div class="skills-container">
+        <h2>Skills</h2>
         <p>HTML, CSS, Javascript, React, Hosting, SEO, Bootstrap, Github</p>
         <!-- icons? -->
       </div>
-      <div class="contact-container">
-        <p>Email, contact links or icons</p>
+      <div
+        class="contact-container"
+        id="contact-container"
+      >
+        <h2>Contact</h2>
+        <p>Email, contact links or icons, resume button</p>
         <br />
         <p>I look forward to working with you!</p>
         <p class="working-together-icons">👩‍💻🤝✨</p>
       </div>
     </div>
+    <script src="/src/app.js"></script>
   </body>
 </html>

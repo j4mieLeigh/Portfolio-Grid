@@ -40,10 +40,12 @@ h1 {
 
 h2 {
   font-size: 18px;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 17px;
+  margin-bottom: 1rem;
 }
 
 .btn {
@@ -68,7 +70,9 @@ HOME PAGE
 =============== */
 
 .nav-header {
+  color: var(--accentColor);
   font-family: "Source Code Pro", monospace;
+  letter-spacing: 1.5px;
 }
 
 .nav-links {
@@ -130,7 +134,7 @@ HOME PAGE
 .sidebar-links a {
   color: var(--textColor);
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -157,11 +161,11 @@ HOME PAGE
   justify-items: left;
   list-style: none;
   margin-top: 1rem;
-  width: 10rem;
+  width: 12rem;
 }
 
 .social-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--secondaryColor);
   transition: var(--mainTransition);
 }
@@ -239,6 +243,17 @@ ABOUT PAGE
 }
 
 /* ===============
+PROJECTS PAGE
+=============== */
+
+.projects-page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 15px 20px;
+}
+
+/* ===============
 MEDIA QUERY: for big screens
 =============== */
 
@@ -293,11 +308,99 @@ MEDIA QUERY: for big screens
   .home-page-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 20px 60px;
+    margin: 30px auto;
+    max-width: 1000px;
   }
 
   .intro-container {
     padding: 120px 60px 60px 60px;
+  }
+
+  .image-container img {
+    border-radius: 40px 0px 40px 40px;
+  }
+
+  .about-page-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "a c";
+    margin: 30px auto;
+    max-width: 1000px;
+  }
+
+  .bio-container {
+    grid-area: a;
+    padding: 45px;
+  }
+
+  .skills-container {
+    grid-area: b;
+    padding: 45px;
+  }
+
+  .contact-container {
+    grid-area: c;
+    padding: 45px;
+  }
+
+  .projects-page-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "a b b c"
+      "a d e e"
+      "a d e e"
+      "f d g g"
+      "h h h i";
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 1000px;
+  }
+
+  .project-one-container {
+    grid-area: a;
+  }
+
+  .project-two-container {
+    grid-area: b;
+  }
+
+  .project-three-container {
+    grid-area: c;
+  }
+
+  .project-four-container {
+    grid-area: d;
+  }
+
+  .project-five-container {
+    grid-area: e;
+  }
+
+  .project-six-container {
+    grid-area: f;
+  }
+
+  .project-seven-container {
+    grid-area: g;
+  }
+
+  .project-eight-container {
+    grid-area: h;
+  }
+
+  .project-nine-container {
+    grid-area: i;
+  }
+
+  .projects-page-container img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
   }
 }
 
