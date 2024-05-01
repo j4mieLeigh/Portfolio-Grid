@@ -348,6 +348,7 @@ MEDIA QUERY: for big screens
 
   .projects-page-container {
     display: grid;
+    gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
@@ -356,14 +357,23 @@ MEDIA QUERY: for big screens
       "a d e e"
       "f d g g"
       "h h h i";
-    gap: 20px;
     margin: 30px auto;
     max-width: 1000px;
+  }
+
+  .projects-page-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   .project-one-container {
     grid-area: a;
   }
+
+  /* .project-one {
+    border-radius: 40px 0 40px 40px;
+  } */
 
   .project-two-container {
     grid-area: b;
@@ -395,12 +405,6 @@ MEDIA QUERY: for big screens
 
   .project-nine-container {
     grid-area: i;
-  }
-
-  .projects-page-container img {
-    height: 100%;
-    width: 100%;
-    /* object-fit: cover; */
   }
 }
 
