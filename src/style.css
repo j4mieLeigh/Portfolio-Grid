@@ -254,6 +254,63 @@ PROJECTS PAGE
 }
 
 /* ===============
+MEDIA QUERY: for small screens
+=============== */
+
+@media screen and (max-width: 767px) {
+  .projects-page {
+    /* background-color: var(--backgroundColor); */
+  }
+
+  .projects-page-container img {
+    border-radius: 20px;
+    margin: 10px auto;
+    max-height: 250px;
+    object-fit: scale-down;
+  }
+
+  .project-description-container {
+    border-bottom: 1px solid rgb(203, 202, 202);
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 80vw;
+  }
+
+  .project-title {
+    font-size: 22px;
+    letter-spacing: normal;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .project-description {
+    font-size: 16px;
+    line-height: 1.23;
+    text-align: justify;
+  }
+
+  .project-skills {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .view-project-btn {
+    border-radius: 0 15px 15px 15px;
+    margin: 20px auto;
+  }
+
+  .view-project-btn a {
+    color: white;
+  }
+}
+
+/* ===============
+END OF MEDIA QUERY: small 
+=============== */
+
+/* =============================================== */
+
+/* ===============
 MEDIA QUERY: for big screens
 =============== */
 
@@ -350,7 +407,7 @@ MEDIA QUERY: for big screens
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: auto;
     grid-template-areas:
       "a b b c"
       "a d e e"
@@ -362,52 +419,99 @@ MEDIA QUERY: for big screens
   }
 
   .projects-page-container img {
-    height: 100%;
+    height: auto;
     width: 100%;
     object-fit: cover;
   }
+
+  /* You might need to adjust individual areas if specific adjustments are necessary
+  .project-five-container img {
+    height: 100%; /* if you want to force the square but ensure the grid area matches */
+
+  /* ======================== */
 
   .project-one-container {
     grid-area: a;
   }
 
-  /* .project-one {
-    border-radius: 40px 0 40px 40px;
-  } */
+  .project-one-container img {
+    border-radius: 0px 40px 40px 40px;
+    height: 100%;
+  }
 
   .project-two-container {
     grid-area: b;
+  }
+
+  .project-two-container img {
+    border-radius: 40px 40px 0 40px;
+    height: 100%;
   }
 
   .project-three-container {
     grid-area: c;
   }
 
+  .project-three-container img {
+    border-radius: 40px 40px 40px 0;
+    height: 100%;
+  }
+
   .project-four-container {
     grid-area: d;
+  }
+
+  .project-four-container img {
+    border-radius: 40px 0 40px 40px;
+    height: 100%;
   }
 
   .project-five-container {
     grid-area: e;
   }
 
+  .project-five-container img {
+    border-radius: 0 40px 40px 40px;
+    height: 100%;
+  }
+
   .project-six-container {
     grid-area: f;
+  }
+
+  .project-six-container img {
+    border-radius: 40px 40px 40px 0;
+    height: 100%;
   }
 
   .project-seven-container {
     grid-area: g;
   }
 
+  .project-seven-container img {
+    border-radius: 40px 40px 0 40px;
+    height: 100%;
+  }
+
   .project-eight-container {
     grid-area: h;
+  }
+
+  .project-eight-container img {
+    border-radius: 0 40px 40px 40px;
+    height: 100%;
   }
 
   .project-nine-container {
     grid-area: i;
   }
+
+  .project-nine-container img {
+    border-radius: 40px 0 40px 40px;
+    height: 100%;
+  }
 }
 
 /* ===============
-END OF MEDIA QUERY
+END OF MEDIA QUERY: big 
 =============== */
