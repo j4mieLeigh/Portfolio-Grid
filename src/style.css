@@ -265,7 +265,8 @@ MEDIA QUERY: for small screens
   .projects-page-container img {
     border-radius: 20px;
     margin: 10px auto;
-    max-height: 250px;
+    max-height: 35vh;
+    max-width: 85vw;
     object-fit: scale-down;
   }
 
@@ -422,13 +423,12 @@ MEDIA QUERY: for big screens
     height: auto;
     width: 100%;
     object-fit: cover;
+    transition: var(--mainTransition);
   }
 
-  /* You might need to adjust individual areas if specific adjustments are necessary
-  .project-five-container img {
-    height: 100%; /* if you want to force the square but ensure the grid area matches */
-
-  /* ======================== */
+  .project img:hover {
+    opacity: 0.1;
+  }
 
   .project-one-container {
     grid-area: a;
@@ -509,6 +509,34 @@ MEDIA QUERY: for big screens
   .project-nine-container img {
     border-radius: 40px 0 40px 40px;
     height: 100%;
+  }
+
+  .project-title {
+    font-size: 32px;
+  }
+
+  .project-skills {
+    font-size: 18px;
+  }
+
+  .project {
+    background-color: var(--primaryColor);
+    position: relative;
+  }
+
+  .project-description-container {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--mainTransition);
+    opacity: 0;
+  }
+
+  .project:hover .project-description-container {
+    opacity: 1;
   }
 }
 
