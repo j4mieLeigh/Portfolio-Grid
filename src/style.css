@@ -1,7 +1,7 @@
 :root {
-  --primaryColor: #c6e5df;
+  --primaryColor: rgb(198, 229, 223);
   --secondaryColor: #c6b2c1;
-  --accentColor: #ad343e;
+  --accentColor: rgb(173, 52, 62);
   --backgroundColor: #eef2fa;
   --textColor: #27474e;
   --mainTransition: all 200ms ease-in-out;
@@ -63,6 +63,11 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   transition: var(--mainTransition);
+}
+
+.highlight {
+  border-radius: 1em 0 1em 0;
+  background-image: var(--secondaryColor);
 }
 
 /* ===============
@@ -195,7 +200,7 @@ HOME PAGE
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr;
-  margin: 15px 20px;
+  margin: 20px;
 }
 
 .intro-container {
@@ -216,7 +221,7 @@ ABOUT PAGE
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr;
-  margin: 15px 20px;
+  margin: 20px;
 }
 
 .bio-container {
@@ -247,67 +252,93 @@ PROJECTS PAGE
 =============== */
 
 .projects-page-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin: 15px 20px;
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* gap: 20px; */
+  margin: 20px;
 }
 
-/* ===============
-MEDIA QUERY: for small screens
-=============== */
-
-@media screen and (max-width: 767px) {
-  .projects-page {
-    /* background-color: var(--backgroundColor); */
-  }
-
-  .projects-page-container img {
-    border-radius: 20px;
-    margin: 10px auto;
-    max-height: 35vh;
-    max-width: 85vw;
-    object-fit: scale-down;
-  }
-
-  .project-description-container {
-    border-bottom: 1px solid rgb(203, 202, 202);
-    padding: 15px;
-    margin: 0 auto;
-    max-width: 80vw;
-  }
-
-  .project-title {
-    font-size: 22px;
-    letter-spacing: normal;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .project-description {
-    font-size: 16px;
-    line-height: 1.23;
-    text-align: justify;
-  }
-
-  .project-skills {
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .view-project-btn {
-    border-radius: 0 15px 15px 15px;
-    margin: 20px auto;
-  }
-
-  .view-project-btn a {
-    color: white;
-  }
+.projects-page-container img {
+  display: none;
+  /* border-radius: 20px;
+  margin: 10px auto;
+  padding: 30px; */
+  /* max-height: 35vh;
+  max-width: 85vw; */
+  /* object-fit: scale-down; */
 }
 
-/* ===============
-END OF MEDIA QUERY: small 
-=============== */
+.project {
+  border-radius: 15px;
+  height: 200px;
+  margin: 30px 20px;
+  padding: 10px;
+}
+
+.project-description-container {
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.project h2 {
+  font-size: 28px;
+  letter-spacing: normal;
+  line-height: 1.2;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.project h3 {
+  color: white;
+  background-color: var(--secondaryColor);
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+  padding: 4px;
+  text-align: center;
+}
+
+/* .view-project-btn {
+  border-radius: 0 15px 15px 15px;
+  margin: 20px auto;
+}
+
+.view-project-btn a {
+  color: white;
+} */
+
+.project-one-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.4),
+      var(--backgroundColor)
+    ),
+    url("./images/responsive\ lp\ 100\ books\ -\ reg.png");
+  background-position: 45% 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-two-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.4),
+      var(--backgroundColor)
+    ),
+    url("./images/bad\ poetry\ generator.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-three-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.4),
+      var(--backgroundColor)
+    ),
+    url("./images/word\ shark\ dictionary\ app\ -\ reg.png");
+  background-position: 90% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* =============================================== */
 
@@ -315,7 +346,7 @@ END OF MEDIA QUERY: small
 MEDIA QUERY: for big screens
 =============== */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .nav {
     background-color: white;
   }
@@ -408,8 +439,12 @@ MEDIA QUERY: for big screens
   }
 
   .projects-page-container img {
+    display: block;
     height: auto;
     width: 100%;
+    margin: 0;
+    max-height: 100%;
+    max-width: 100%;
     object-fit: cover;
     transition: var(--mainTransition);
   }
