@@ -25,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #3e197a;
+}
+
 img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: block;
@@ -275,8 +279,12 @@ PROJECTS PAGE
   padding: 10px;
 }
 
+.project:hover {
+  cursor: pointer;
+}
+
 .project-description-container {
-  padding: 30px;
+  padding: 15px;
   margin: 0 auto;
 }
 
@@ -320,7 +328,7 @@ PROJECTS PAGE
 
 .project-two-container {
   background-image: linear-gradient(
-      rgba(241, 222, 222, 0.4),
+      rgba(241, 222, 222, 0.5),
       var(--backgroundColor)
     ),
     url("./images/bad\ poetry\ generator.png");
@@ -340,13 +348,79 @@ PROJECTS PAGE
   background-size: cover;
 }
 
+.project-four-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.4),
+      var(--backgroundColor)
+    ),
+    url("./images/plant\ mom\ light-dark\ landing\ page.png");
+  background-position: 80% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-five-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.4),
+      var(--backgroundColor)
+    ),
+    url("./images/world\ clock\ -\ sq.png");
+  background-position: 80% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-six-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.7),
+      var(--backgroundColor)
+    ),
+    url("./images/inanespirational\ quotes.png");
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-seven-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.5),
+      var(--backgroundColor)
+    ),
+    url("./images/react\ weather\ app\ -\ sq.png");
+  background-position: 60% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-eight-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.7),
+      var(--backgroundColor)
+    ),
+    url("./images/responsive\ lp\ singapore.png");
+  background-position: 60% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-nine-container {
+  background-image: linear-gradient(
+      rgba(241, 222, 222, 0.7),
+      var(--backgroundColor)
+    ),
+    url("./images/pacos\ tacos\ lp.png");
+  background-position: 40% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* =============================================== */
 
 /* ===============
 MEDIA QUERY: for big screens
 =============== */
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1000px) {
   .nav {
     background-color: white;
   }
@@ -423,6 +497,29 @@ MEDIA QUERY: for big screens
     padding: 45px;
   }
 
+  .project-description-container {
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .project h2 {
+    font-size: 28px;
+    letter-spacing: normal;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .project h3 {
+    color: white;
+    background-color: var(--secondaryColor);
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 4px;
+    text-align: center;
+  }
+
   .projects-page-container {
     display: grid;
     gap: 20px;
@@ -454,6 +551,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-one-container {
+    background-image: none;
+    border-radius: 0px 40px 40px 40px;
     grid-area: a;
   }
 
@@ -463,6 +562,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-two-container {
+    background-image: none;
+    border-radius: 40px 40px 0 40px;
     grid-area: b;
   }
 
@@ -472,6 +573,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-three-container {
+    background-image: none;
+    border-radius: 40px 40px 40px 0;
     grid-area: c;
   }
 
@@ -481,6 +584,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-four-container {
+    background-image: none;
+    border-radius: 40px 0 40px 40px;
     grid-area: d;
   }
 
@@ -490,6 +595,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-five-container {
+    background-image: none;
+    border-radius: 0 40px 40px 40px;
     grid-area: e;
   }
 
@@ -499,6 +606,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-six-container {
+    background-image: none;
+    border-radius: 40px 40px 40px 0;
     grid-area: f;
   }
 
@@ -508,6 +617,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-seven-container {
+    background-image: none;
+    border-radius: 40px 40px 0 40px;
     grid-area: g;
   }
 
@@ -517,6 +628,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-eight-container {
+    background-image: none;
+    border-radius: 0 40px 40px 40px;
     grid-area: h;
   }
 
@@ -526,6 +639,8 @@ MEDIA QUERY: for big screens
   }
 
   .project-nine-container {
+    background-image: none;
+    border-radius: 40px 0 40px 40px;
     grid-area: i;
   }
 
@@ -536,6 +651,9 @@ MEDIA QUERY: for big screens
 
   .project {
     background-color: var(--primaryColor);
+    height: auto;
+    margin: 0;
+    padding: 0px;
     position: relative;
   }
 
