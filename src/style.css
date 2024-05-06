@@ -37,8 +37,7 @@ img {
 
 h1 {
   font-family: var(--headingFontFamily);
-  font-size: 36px;
-  letter-spacing: 2px;
+  font-size: 42px;
   margin-bottom: 1.25rem;
 }
 
@@ -234,10 +233,36 @@ ABOUT PAGE
   padding: 30px;
 }
 
+.looking-forward {
+  text-align: center;
+}
+
 .skills-container {
   background-color: var(--backgroundColor);
   border-radius: 40px 40px 0px 40px;
   padding: 30px;
+}
+
+.skills-container h2,
+.contact-container h2 {
+  font-size: 24px;
+}
+
+.skills li {
+  border: 2px solid var(--textColor);
+  border-radius: 30px;
+  display: inline-block;
+  padding: 5px 10px;
+  list-style: none;
+  margin: 5px 5px 5px 0;
+  transition: var(--mainTransition);
+}
+
+.skills li:hover {
+  background-color: var(--textColor);
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .contact-container {
@@ -246,9 +271,22 @@ ABOUT PAGE
   padding: 30px;
 }
 
-.working-together-icons {
-  margin-top: 10px;
-  text-align: center;
+.contact-links {
+  list-style: none;
+}
+
+.contact-links li {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+.contact-links i {
+  font-size: 28px;
+}
+
+.contact-link {
+  /* padding: 20px 0 0 0; */
 }
 
 /* ===============
