@@ -25,9 +25,9 @@ a {
   text-decoration: none;
 }
 
-a:visited {
+/* a:visited {
   color: #3e197a;
-}
+} */
 
 img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -38,11 +38,11 @@ img {
 h1 {
   font-family: var(--headingFontFamily);
   font-size: 42px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.2rem;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 1rem;
 }
 
@@ -52,20 +52,33 @@ h3 {
 }
 
 .btn {
-  background: var(--secondaryColor);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 15px 15px 15px 0;
-  color: white;
-  cursor: pointer;
+  border: 2px solid var(--textColor);
+  border-radius: 30px;
   display: block;
   font-size: 18px;
   letter-spacing: 2px;
   margin: 30px auto;
-  padding: 10px;
+  padding: 5px 10px;
   max-width: 200px;
   text-align: center;
   text-transform: uppercase;
   transition: var(--mainTransition);
+}
+
+.btn:hover {
+  background-color: var(--textColor);
+  border: 2px solid var(--textColor);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.btn a {
+  color: var(--textColor);
+}
+
+.btn a:hover {
+  color: white;
 }
 
 .highlight {
@@ -206,10 +219,19 @@ HOME PAGE
   margin: 20px;
 }
 
+.home-page-btns {
+  display: flex;
+  justify-content: center;
+}
+
 .intro-container {
   background-color: var(--primaryColor);
   border-radius: 40px 40px 40px 0;
   padding: 30px;
+}
+
+.intro-container h2 {
+  margin-bottom: 0;
 }
 
 .image-container img {
@@ -243,11 +265,6 @@ ABOUT PAGE
   padding: 30px;
 }
 
-.skills-container h2,
-.contact-container h2 {
-  font-size: 24px;
-}
-
 .skills li {
   border: 2px solid var(--textColor);
   border-radius: 30px;
@@ -260,9 +277,10 @@ ABOUT PAGE
 
 .skills li:hover {
   background-color: var(--textColor);
-  border: none;
+  border: 2px solid var(--textColor);
   color: white;
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .contact-container {
@@ -294,20 +312,11 @@ PROJECTS PAGE
 =============== */
 
 .projects-page-container {
-  /* display: grid; */
-  /* grid-template-columns: 1fr; */
-  /* gap: 20px; */
   margin: 20px;
 }
 
 .projects-page-container img {
   display: none;
-  /* border-radius: 20px;
-  margin: 10px auto;
-  padding: 30px; */
-  /* max-height: 35vh;
-  max-width: 85vw; */
-  /* object-fit: scale-down; */
 }
 
 .project {
@@ -343,15 +352,6 @@ PROJECTS PAGE
   padding: 4px;
   text-align: center;
 }
-
-/* .view-project-btn {
-  border-radius: 0 15px 15px 15px;
-  margin: 20px auto;
-}
-
-.view-project-btn a {
-  color: white;
-} */
 
 .project-one-container {
   background-image: linear-gradient(
@@ -455,10 +455,29 @@ PROJECTS PAGE
 /* =============================================== */
 
 /* ===============
+MEDIA QUERY: for medium screens
+=============== */
+
+@media screen and (min-width: 450px) {
+  .projects-page-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project {
+    border-radius: 15px;
+    height: 200px;
+    margin: 15px;
+    padding: 10px;
+  }
+}
+
+/* ===============
 MEDIA QUERY: for big screens
 =============== */
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
   .nav {
     background-color: white;
   }
