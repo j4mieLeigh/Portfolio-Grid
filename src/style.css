@@ -1,7 +1,11 @@
+/* ===============
+UNIVERSAL STYLES
+=============== */
+
 :root {
-  --primaryColor: rgb(198, 229, 223);
+  --primaryColor: #c6e5df;
   --secondaryColor: #c6b2c1;
-  --accentColor: rgb(173, 52, 62);
+  --accentColor: #a59132;
   --backgroundColor: #eef2fa;
   --textColor: #27474e;
   --mainTransition: all 200ms ease-in-out;
@@ -25,10 +29,6 @@ a {
   text-decoration: none;
 }
 
-/* a:visited {
-  color: #3e197a;
-} */
-
 img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   display: block;
@@ -42,7 +42,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 21px;
   margin-bottom: 1rem;
 }
 
@@ -51,11 +51,16 @@ h3 {
   margin-bottom: 1rem;
 }
 
+p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
 .btn {
   border: 2px solid var(--textColor);
   border-radius: 30px;
   display: block;
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 2px;
   margin: 30px auto;
   padding: 5px 10px;
@@ -87,13 +92,24 @@ h3 {
 }
 
 /* ===============
-HOME PAGE
+NAVBAR AND SIDEBAR
 =============== */
 
 .nav-header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  letter-spacing: 1.5px;
+}
+
+.nav-header a {
   color: var(--accentColor);
   font-family: "Source Code Pro", monospace;
-  letter-spacing: 1.5px;
+  transition: var(--mainTransition);
+}
+
+.nav-header a:hover {
+  opacity: 0.6;
 }
 
 .nav-links {
@@ -111,12 +127,6 @@ HOME PAGE
   margin: 0 auto;
   max-width: 1170px;
   width: 100%;
-}
-
-.nav-header {
-  align-items: center;
-  display: grid;
-  grid-template-columns: auto 1fr;
 }
 
 .nav-btn {
@@ -163,11 +173,6 @@ HOME PAGE
   transition: var(--mainTransition);
 }
 
-.sidebar-links a:hover {
-  color: var(--accentColor);
-  transition: var(--mainTransition);
-}
-
 .navbar-fixed {
   position: fixed;
   top: 0;
@@ -191,10 +196,6 @@ HOME PAGE
   transition: var(--mainTransition);
 }
 
-.social-icon:hover {
-  color: var(--accentColor);
-}
-
 .close-btn {
   background: transparent;
   border: transparent;
@@ -206,11 +207,9 @@ HOME PAGE
   transition: var(--mainTransition);
 }
 
-.close-btn:hover {
-  color: var(--accentColor);
-  cursor: pointer;
-  transition: var(--mainTransition);
-}
+/* ===============
+HOME PAGE
+=============== */
 
 .home-page-container {
   display: grid;
@@ -219,15 +218,14 @@ HOME PAGE
   margin: 20px;
 }
 
-.home-page-btns {
-  display: flex;
-  justify-content: center;
-}
-
 .intro-container {
   background-color: var(--primaryColor);
   border-radius: 40px 40px 40px 0;
   padding: 30px;
+}
+
+.home-page-btns {
+  margin: 45px 0;
 }
 
 .intro-container h2 {
@@ -269,6 +267,7 @@ ABOUT PAGE
   border: 2px solid var(--textColor);
   border-radius: 30px;
   display: inline-block;
+  font-size: 15px;
   padding: 5px 10px;
   list-style: none;
   margin: 5px 5px 5px 0;
@@ -294,17 +293,22 @@ ABOUT PAGE
 }
 
 .contact-links li {
-  display: block;
-  font-size: 17px;
-  margin-bottom: 3px;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 .contact-links i {
   font-size: 28px;
+  vertical-align: middle;
 }
 
-.contact-link {
-  /* padding: 20px 0 0 0; */
+.contact-links a {
+  color: var(--textColor);
+}
+
+.contact-links a:hover {
+  opacity: 0.7;
 }
 
 /* ===============
@@ -336,7 +340,7 @@ PROJECTS PAGE
 }
 
 .project h2 {
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: normal;
   line-height: 1.2;
   margin-bottom: 0;
@@ -452,6 +456,27 @@ PROJECTS PAGE
   background-size: cover;
 }
 
+/* ===============
+FOOTER
+=============== */
+
+footer {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--accentColor);
+  padding-bottom: 2px;
+  transition: var(--mainTransition);
+}
+
+footer a:hover {
+  border-bottom: 1.5px solid var(--accentColor);
+}
+
 /* =============================================== */
 
 /* ===============
@@ -459,6 +484,24 @@ MEDIA QUERY: for medium screens
 =============== */
 
 @media screen and (min-width: 450px) {
+  .home-page-container {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 15px;
+  }
+
+  .about-page-container {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 15px;
+  }
+
+  .home-page-btns {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
   .projects-page-container {
     display: grid;
     gap: 20px;
@@ -468,7 +511,6 @@ MEDIA QUERY: for medium screens
   .project {
     border-radius: 15px;
     height: 200px;
-    margin: 15px;
     padding: 10px;
   }
 }
@@ -504,7 +546,13 @@ MEDIA QUERY: for big screens
   }
 
   .nav-links a:hover {
-    color: var(--secondaryColor);
+    border-bottom: 2px solid var(--secondaryColor);
+    padding: 0 0 4px 0;
+  }
+
+  nav li.active a {
+    border-bottom: 2px solid var(--secondaryColor);
+    padding: 0 0 4px 0;
   }
 
   .nav-center {
@@ -518,6 +566,7 @@ MEDIA QUERY: for big screens
     grid-template-columns: 1fr 1fr;
     margin: 30px auto;
     max-width: 1000px;
+    padding: 0;
   }
 
   .intro-container {
@@ -537,44 +586,22 @@ MEDIA QUERY: for big screens
       "a c";
     margin: 30px auto;
     max-width: 1000px;
+    padding: 0;
   }
 
   .bio-container {
     grid-area: a;
-    padding: 45px;
+    padding: 40px;
   }
 
   .skills-container {
     grid-area: b;
-    padding: 45px;
+    padding: 40px;
   }
 
   .contact-container {
     grid-area: c;
-    padding: 45px;
-  }
-
-  .project-description-container {
-    padding: 15px;
-    margin: 0 auto;
-  }
-
-  .project h2 {
-    font-size: 28px;
-    letter-spacing: normal;
-    line-height: 1.2;
-    margin-bottom: 0;
-    text-align: center;
-  }
-
-  .project h3 {
-    color: white;
-    background-color: var(--secondaryColor);
-    font-size: 15px;
-    font-weight: normal;
-    line-height: 1.5;
-    padding: 4px;
-    text-align: center;
+    padding: 40px;
   }
 
   .projects-page-container {
@@ -603,8 +630,71 @@ MEDIA QUERY: for big screens
     transition: var(--mainTransition);
   }
 
+  .project {
+    background-color: var(--primaryColor);
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
   .project:hover img {
     opacity: 0.1;
+  }
+
+  .project:hover .project-description-container {
+    opacity: 1;
+  }
+
+  .project::after {
+    border: 3.5px solid white;
+    border-radius: 40px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    opacity: 0;
+  }
+
+  .project:hover::after {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(0.78);
+  }
+
+  .project-description-container {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    padding: 15px;
+    margin: 0 auto;
+    opacity: 0;
+
+    transform: translate(-50%, -50%);
+    transition: var(--mainTransition);
+  }
+
+  .project h2 {
+    font-size: 28px;
+    letter-spacing: normal;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .project h3 {
+    color: white;
+    background-color: var(--secondaryColor);
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 4px;
+    text-align: center;
   }
 
   .project-one-container {
@@ -704,48 +794,6 @@ MEDIA QUERY: for big screens
   .project-nine-container img {
     border-radius: 40px 0 40px 40px;
     height: 100%;
-  }
-
-  .project {
-    background-color: var(--primaryColor);
-    height: auto;
-    margin: 0;
-    padding: 0px;
-    position: relative;
-  }
-
-  .project-description-container {
-    color: white;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: var(--mainTransition);
-    opacity: 0;
-  }
-
-  .project:hover .project-description-container {
-    opacity: 1;
-  }
-
-  .project::after {
-    border: 3.5px solid white;
-    border-radius: 40px;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: var(--mainTransition);
-    opacity: 0;
-  }
-
-  .project:hover::after {
-    cursor: pointer;
-    opacity: 1;
-    transform: scale(0.78);
   }
 }
 
