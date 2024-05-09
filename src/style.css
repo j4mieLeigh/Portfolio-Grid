@@ -514,10 +514,7 @@ MEDIA QUERY: for medium screens
   }
 
   .project {
-    border-radius: 15px;
-    height: 200px;
     margin: 0;
-    padding: 10px;
   }
 }
 
@@ -677,30 +674,9 @@ MEDIA QUERY: for big screens
     text-align: center;
     top: 50%;
     left: 50%;
-    padding: 15px;
-    margin: 0 auto;
     opacity: 0;
-
     transform: translate(-50%, -50%);
     transition: var(--mainTransition);
-  }
-
-  .project h2 {
-    font-size: 26px;
-    letter-spacing: normal;
-    line-height: 1.2;
-    margin-bottom: 0;
-    text-align: center;
-  }
-
-  .project h3 {
-    color: white;
-    background-color: var(--secondaryColor);
-    font-size: 15px;
-    font-weight: normal;
-    line-height: 1.5;
-    padding: 4px;
-    text-align: center;
   }
 
   .project-one-container {
