@@ -293,7 +293,7 @@ ABOUT PAGE
 }
 
 .contact-links li {
-  display: inline-block;
+  display: flex;
   font-size: 16px;
   margin-bottom: 8px;
 }
@@ -301,6 +301,10 @@ ABOUT PAGE
 .contact-links i {
   font-size: 28px;
   vertical-align: middle;
+}
+
+.icon-container {
+  min-width: 40px;
 }
 
 .contact-links a {
@@ -340,7 +344,8 @@ PROJECTS PAGE
 }
 
 .project h2 {
-  font-size: 26px;
+  color: var(--textColor);
+  font-size: 25px;
   letter-spacing: normal;
   line-height: 1.2;
   margin-bottom: 0;
@@ -511,6 +516,7 @@ MEDIA QUERY: for medium screens
   .project {
     border-radius: 15px;
     height: 200px;
+    margin: 0;
     padding: 10px;
   }
 }
@@ -680,7 +686,7 @@ MEDIA QUERY: for big screens
   }
 
   .project h2 {
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: normal;
     line-height: 1.2;
     margin-bottom: 0;
